@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grofy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    
+    /* Products Layout */
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .services-list > div {
+      background-color: #fff;
+      padding: 10px;
+      width: 30%; /* Adjust width to make products smaller */
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add space between product rows */
+    }
+
+    .services-list img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      max-width: 120px; /* Decreased max-width for smaller images */
+      margin: 0 auto;
+    }
+
+    .midd {
+      margin-top: 10px;
+    }
+
+    .gold i {
+      color: gold;
+      font-size:12px!important;
+    }
+
+    .addtocart {
+      background-color: #ff5733;
+      color: white;
+      padding: 8px 12px; /* Smaller button padding */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px; /* Smaller font size */
+      width: 100%; /* Button takes full width of the container */
+    }
+
+    .addtocart:hover {
+      background-color: #e74c3c;
+    }
+
+    /* Dark mode button */
+    .switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .slider {
+      width: 34px;
+      height: 20px;
+      background: #ccc;
+      border-radius: 50px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    input:checked + .slider {
+      background: #4CAF50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(14px);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav>
+    <div class="nav-center">
+      <div class="nav-header">
+        <h1>grofy</h1>
+        <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sign1.html">Account</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="index.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+      <label class="switch">
+        <input type="checkbox" id="modeSwitch">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+</header>
+
+<!-- Product Tabs -->
+<section class="productsmain">
+  <h1 class="subtitle p">Our Products</h1>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Burgers')">Burgers</button>
+    <button class="tablinks" onclick="openCity(event, 'Wraps')">Wraps</button>
+    <button class="tablinks" onclick="openCity(event, 'Drinks')" id="defaultOpen">Drinks</button>
+  </div>
+
+  <!-- Burgers Section -->
+  <div id="Burgers" class="tabcontent">
+    <div class="services-list">
+      <div>
+        <img src="img/burger.webp" alt="Burger 1">
+        <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Ultimate Bacon Cheeseburger</p>
+          <h3>$3.10</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wraps Section -->
+  <div id="Wraps" class="tabcontent">
+    <div class="services-list">
+      <div>
+        <img src="img/wraps.jpeg" alt="Wrap 1">
+        <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Chicken Caesar Wrap</p>
+          <h3>$3.10</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drinks Section -->
+  <div id="Drinks" class="tabcontent">
+    <div class="services-list">
+      
+      <div>
+        <img src="img/juice-mint.jpeg" alt="Mint Flavoured Drink">
+        <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Mint Flavoured Drink</p>
+          <h3>$3.20</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tab Switch Script -->
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<!-- Open default tab -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("defaultOpen").click();
+
+  document.querySelectorAll(".addtocart").forEach(function(button) {
+    button.addEventListener("click", function() {
+      window.location.href = "/productsingle.html";
+    });
+  });
+});
+</script>
+
+<script src="https://kit.fontawesome.com/591c3143d3.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>

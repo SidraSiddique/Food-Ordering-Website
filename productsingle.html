@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grofy</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- -----------header---------- -->
+    <header>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+         <h1>grofy</h1>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="sign1.html">Account</a>
+          </li>
+        </ul>
+        <!-- social media -->
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+           </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+
+        </ul>
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </nav>
+  </header>
+
+<section class="mainps">
+    <div class="img">
+        <img class="pimg" src="/img/burger.webp" alt="Product Image">
+    </div>
+    <div class="content">
+        <h3 class="title">Ultimate Bacon Cheeseburger</h3>
+        <p>The Ultimate Bacon Cheeseburger is a mouthwatering culinary delight that combines the savory flavors of juicy beef patties, crispy bacon strips, and melted cheese, all nestled between soft buns. This indulgent burger promises a symphony of tastes and textures, satisfying the most intense cravings for a classic American comfort food experience.</p>
+        <div class="share-buttons">
+            <a id="facebook-share"><i class="fab fa-facebook"></i></a>
+            <a id="twitter-share"><i class="fab fa-twitter"></i></a>
+            <a id="linkedin-share"><i class="fab fa-linkedin"></i></a>
+          </div>                   
+        <button id="addtocart">ADD TO CART</button>
+    </div>
+</section>
+<section id="services">
+    <div class="container">
+        <h1>Related Products </h1>
+        
+      <div class="services-list">
+        <div>
+          <img src="img/burger.webp" alt="" >
+          <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Ultimate Bacon Cheeseburger</p>
+          <h3> $ 3.10</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+    
+        </div>
+        </div>
+        <div>
+          <img src="img/burger2.jpeg" alt="">
+          <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Spicy Jalapeño Burger</p>
+          <h3> $ 5.50</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+        </div>
+        </div>
+        <div>
+          <img src="img/burgers3.webp" alt="">
+          <div class="midd">
+          <span class="gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p>Ultimate Bacon Cheeseburger</p>
+          <h3> $ 3.20</h3><br>
+          <button class="addtocart">ADD TO CART</button>
+        </div>
+        </div>
+        
+      </div>
+    
+    </div>
+    
+    
+    </section>
+
+
+
+<footer id="footer">
+    Copywrite&#169 www.grofy.com | All rights reserved 
+</footer>
+<script src="app.js">
+      document.getElementById("defaultOpen").click();
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var currentPageUrl = window.location.href;
+
+  document.getElementById("facebook-share").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentPageUrl);
+  document.getElementById("twitter-share").href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentPageUrl) + "&text=Check%20out%20this%20awesome%20website!";
+  document.getElementById("linkedin-share").href = "https://www.linkedin.com/shareArticle?url=" + encodeURIComponent(currentPageUrl) + "&title=Example%20Website";
+});
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var buttons = document.querySelectorAll(".addtocart");
+
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      window.location.href = "/productsingle.html"; // Change this to your desired URL
+    });
+  });
+});
+
+</script>
+<script src="https://kit.fontawesome.com/591c3143d3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
